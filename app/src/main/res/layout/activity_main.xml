@@ -14,17 +14,17 @@
         android:layout_marginTop="36dp"
         android:text="Age: "
         app:layout_constraintEnd_toStartOf="@+id/displayAge"
-        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.934"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
 
     <TextView
         android:id="@+id/displayAge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="17dp"
+        android:layout_height="21dp"
         android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
 
@@ -45,34 +45,35 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
         android:text="Sign Up"
+        android:textColor="#00DEC5"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.058" />
+        app:layout_constraintVertical_bias="0.123" />
 
     <EditText
         android:id="@+id/firstNameEditText"
-        android:layout_width="242dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="283dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="First Name"
         android:inputType="textPersonName"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/lastNameEditText"
-        android:layout_width="237dp"
-        android:layout_height="44dp"
+        android:layout_width="282dp"
+        android:layout_height="45dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Last Name"
@@ -84,7 +85,7 @@
 
     <EditText
         android:id="@+id/emailEditText"
-        android:layout_width="240dp"
+        android:layout_width="280dp"
         android:layout_height="45dp"
         android:layout_marginTop="16dp"
         android:ems="10"
@@ -99,7 +100,7 @@
         android:id="@+id/goToNextBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="288dp"
+        android:layout_marginTop="244dp"
         android:background="#00DEC5"
         android:text="NEXT PAGE"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,14 +122,16 @@
 
     <EditText
         android:id="@+id/phoneNumEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="211dp"
+        android:layout_height="42dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Phone Number"
         android:inputType="textPersonName"
+        android:textSize="14sp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phoneNumSwitch" />
 

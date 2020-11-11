@@ -3,6 +3,7 @@ package com.example.cc17uielements
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.View
 import android.widget.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -13,11 +14,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val signup = findViewById<Button>(R.id.goToNextBtn)
-        val firstName = findViewById<EditText>(R.id.firstNameEditText).text.toString()
-        val lastName = findViewById<EditText>(R.id.lastNameEditText).text.toString()
-        val emailAdd = findViewById<EditText>(R.id.emailEditText).text.toString()
-        val age = findViewById<TextView>(R.id.displayAge).text.toString()
-        val phoneNum = findViewById<EditText>(R.id.phoneNumEditText).text.toString()
+        val firstName = findViewById<EditText>(R.id.firstNameEditText).text
+        val lastName = findViewById<EditText>(R.id.lastNameEditText).text
+        val emailAdd = findViewById<EditText>(R.id.emailEditText).text
+        val phoneNum = findViewById<EditText>(R.id.phoneNumEditText).text
 
         findViewById<Switch>(R.id.phoneNumSwitch).setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
@@ -42,11 +42,20 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
+
         signup.setOnClickListener {
-            if (firstName == null || lastName == null || emailAdd == null || age == null) {
-                Toast.makeText(this, "Please fill up all fields", Toast.LENGTH_SHORT).show()
+            val age = findViewById<TextView>(R.id.displayAge).text
+            if (TextUtils.isEmpty(firstName)) {
+                firstNameEditText.setError("Please enter first name")
+            } else if (TextUtils.isEmpty(lastName)) {
+                lastNameEditText.setError("Please enter last name")
+            } else if (TextUtils.isEmpty(emailAdd)) {
+                emailEditText.setError("Please enter email address")
+            } else if (age.length <= 0) {
+                Toast.makeText(this, "Please set your age", Toast.LENGTH_SHORT).show()
             } else {
                 goToNextActivity()
+
             }
         }
     }
@@ -57,7 +66,7 @@ class MainActivity : AppCompatActivity() {
         val lastName = lastNameEditText.text.toString()
         val emailAdd = emailEditText.text.toString()
         val age = displayAge.text.toString()
-        val phoneNum = phoneNumEditText.toString()
+        val phoneNum = phoneNumEditText.text.toString()
         intent.putExtra("firstName", firstName)
         intent.putExtra("lastName", lastName)
         intent.putExtra("emailAdd", emailAdd)
@@ -65,5 +74,4 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("phoneNum", phoneNum)
         startActivity(intent)
     }
-
-    }
+}
