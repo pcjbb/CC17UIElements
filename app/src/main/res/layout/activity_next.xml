@@ -6,22 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".NextActivity">
 
-    <CalendarView
+
+    <DatePicker
         android:id="@+id/birthDatePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
+        android:datePickerMode="calendar"
         app:layout_constraintTop_toBottomOf="@+id/birthDateText" />
+
 
     <Button
         android:id="@+id/submitBdateBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_width="130dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
         android:text="SUBMIT"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,4 +41,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
